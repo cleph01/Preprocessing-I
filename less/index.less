@@ -54,6 +54,169 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: @font-fam;
+}
+
+//My Code
+h1{
+	font-size:1.75rem;
+}
+h3{
+	font-size:1.5rem;
+}
+h5{
+	font-size:1.25rem
+}
+//Variables
+@font-fam: 'Quicksand';
+
+
+//Mixins
+.btn-size{
+	width:150px;
+	padding:15px;
+	border:1px solid #000000;
+	border-radius:15px;
+}
+.flex-column{
+	display:flex;
+	flex-direction:column;
+	justify-content: space-around;
+}
+.flex-row{
+	display:flex;
+	justify-content: space-around;
+}
+
+//end Mixins
+
+.container{
+	margin: 25px 25px;
+
+
+}
+nav{
+	background:#ffffff;
+	margin:25px 0px;
+
+	.nav-item{
+		display:flex;
+		justify-content: flex-end;
+
+		.link-container{
+			.flex-row();
+			justify-content: space-around;
+			width:350px;
+		}
+		.menu-links{
+			color:#000;
+			text-decoration: none;
+			font-size: .75rem;
+
+		}
+	}
+
+}
+
+header{
+	.flex-column();
+	background:#e1e1e1;
+	padding:50px;
+	height:650px;
+
+	img{
+		width:250px;
+		height:auto;
+	}
+
+	.call-to-action-btn{
+		.btn-size();
+		.flex-row();
+		justify-content: space-around;
+		align-content: space-around;
+	}
+}
+
+.summary-container{
+	.flex-row();
+	margin:25px 0px;
+
+	.summary{
+		width:50%;
+		padding-right:25px;
+
+		h3{
+			margin-bottom:20px;
+		}
+	}
+
+	.skills{
+		width:50%;
+
+		h3{
+			margin-bottom:20px;
+		}
+
+		.skills-table {
+	
+			border-collapse: collapse;
+			width: 100%;
+	
+			td, th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+	
+				// tr:nth-child(even) {
+				// background-color: #dddddd;
+
+				//}
+
+		
+			
+		}
+					
+		
+	}
+}
+
+.work-history{
+
+	.work-history-table {
+
+		border-collapse: collapse;
+		width: 100%;
+
+		td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		  }
+
+		  tr:nth-child(even) {
+			background-color: #dddddd;
+	
+			th{
+				font-weight: 800px;
+			  }
+	
+		  }
+	  }
+	  	  
+}
+
+footer{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	background:#e1e1e1;
+	height: 75px;
+	margin-top: 25px;
+
+	p{
+		margin: auto
+	}
 }
 
