@@ -175,10 +175,32 @@ nav .nav-item .link-container {
   justify-content: space-around;
   width: 350px;
 }
+@media (max-width: 500px) {
+  nav .nav-item .link-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
 nav .nav-item .menu-links {
   color: #000;
   text-decoration: none;
   font-size: 0.75rem;
+}
+@media (max-width: 500px) {
+  nav .nav-item .menu-links {
+    font-size: 1.25rem;
+    font-size: 1.75rem;
+    width: 100%;
+    border: 1px solid #fff;
+    height: 3rem;
+    padding: 10px 0px;
+    color: #000;
+    background-color: #e1e1e1;
+  }
 }
 header {
   display: flex;
@@ -187,6 +209,12 @@ header {
   background: #e1e1e1;
   padding: 50px;
   height: 650px;
+}
+@media (max-width: 500px) {
+  header {
+    text-align: center;
+    height: 800px;
+  }
 }
 header img {
   width: 250px;
@@ -201,20 +229,55 @@ header .call-to-action-btn {
   justify-content: space-around;
   align-content: space-around;
 }
+@media (max-width: 500px) {
+  header .call-to-action-btn {
+    text-align: center;
+    width: 100%;
+  }
+}
 .summary-container {
   display: flex;
   justify-content: space-around;
   margin: 25px 0px;
 }
+@media (max-width: 500px) {
+  .summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
 .summary-container .summary {
   width: 50%;
   padding-right: 25px;
 }
+@media (max-width: 500px) {
+  .summary-container .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
 .summary-container .summary h3 {
   margin-bottom: 20px;
 }
+.summary-container .summary p {
+  margin: 25px 0px;
+}
+@media (max-width: 500px) {
+  .summary-container .summary p {
+    margin: 15px 0px;
+  }
+}
 .summary-container .skills {
   width: 50%;
+}
+@media (max-width: 500px) {
+  .summary-container .skills {
+    width: 100%;
+  }
 }
 .summary-container .skills h3 {
   margin-bottom: 20px;
@@ -230,6 +293,7 @@ header .call-to-action-btn {
   padding: 8px;
 }
 .work-history .work-history-table {
+  margin-top: 15px;
   border-collapse: collapse;
   width: 100%;
 }
